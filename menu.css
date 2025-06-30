@@ -1,0 +1,188 @@
+/* Estilo global para que el margen y el relleno no afecten el diseño */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: black;
+}
+h1
+{
+    color: white;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    /*border-top: 40px solid transparent;*/
+}
+.logo_fondo img
+{
+    width: 80vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    left: 50vw;
+}
+/* Estilos para el contenedor principal del menú */
+.menu {
+    display: flex; /* Coloca los elementos uno al lado del otro */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al cambiar el tamaño de la pantalla */
+    justify-content: space-around; /* Espaciado uniforme entre los elementos */
+    align-items: center; /* Centra los ítems verticalmente */
+    height: 80vh; /* la altura de la pantalla */
+}
+
+/* Estilo para cada elemento del menú */
+.menu-item
+{
+    display: flex;
+    flex-direction: column; /* Coloca los íconos arriba del texto */
+    justify-content: center;
+    align-items: center;
+    width: 25%; /* Cada ítem ocupa un cuarto de la pantalla (ajustable) */
+    height: 30vh; /* Altura ajustada para que se adapte a la pantalla */
+    background-color: #990000; /* Fondo blanco para los ítems */
+    color: white;
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 10px; /* Separación entre los ítems */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Suaviza la transición al hacer hover */
+    text-align: center; /* Centra el texto */
+    z-index: 1;
+}
+
+/* Cambia el color y eleva el ítem al pasar el cursor */
+.menu-item:hover {
+    background-color: white; /* Color de fondo al hacer hover */
+    color: black; /* Cambia el color del texto e iconos al hacer hover */
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Estilos para los enlaces */
+.menu-item a
+{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Coloca los íconos arriba del texto */
+}
+
+.menu-item:hover a
+{
+    color: black; /* Cambia el color del enlace al pasar el cursor */
+}
+
+/* Estilos para los íconos */
+.menu-item i {
+    font-size: 4em; /* Tamaño grande para los íconos */
+    margin-bottom: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para el texto de cada ítem */
+.menu-item span {
+    font-size: 1.2em; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para el texto */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Estilos del submenú desplegable */
+.dropdown-content {
+    display: none; /* Oculta el submenú por defecto */
+    flex-direction: column; /* Los enlaces estarán uno debajo de otro */
+    position: absolute; /* Posición absoluta para que no afecte el flujo del contenido */
+    background-color: white; /* Fondo blanco para el submenú */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra alrededor del submenú */
+    margin-top: 5px; /* Margen superior para separar el submenú del ítem */
+    padding: 10px; /* Espacio interior del submenú */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 200px; /* Ancho del submenú */
+    z-index: 100; /* Para que esté por encima de otros elementos */
+}
+
+/* Mostrar el submenú cuando tiene la clase 'show' */
+.dropdown-content.show {
+    display: flex; /* Se muestra el submenú */
+}
+
+/* Estilo para los enlaces dentro del submenú */
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: black; /* Color del texto del submenú */
+    display: block; /* Cada enlace ocupa toda la línea */
+    text-align: center; /* Centra el texto del enlace */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Cambia el color de fondo y texto cuando pasas el cursor sobre los enlaces */
+.dropdown-content a:hover {
+    background-color: #0056b3; /* Fondo azul al hacer hover */
+    color: white; /* Texto blanco al hacer hover */
+}
+
+.whatsapp-btn
+{
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    /*border-radius: 50%;
+    background-color: #25D366; /* Color de WhatsApp */
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 20px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: 90vw;
+}
+/* Cambia el color al pasar el ratón por encima del botón */
+.whatsapp-btn:hover
+{
+    opacity: 0.8;
+}
+
+.logout-btn {
+    background-color: #990000; /* Color rojo para el botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    font-size: 20px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 15px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto de transición al hacer hover */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50vw;
+}
+
+.logout-btn:hover
+{
+    background-color: white; /* Cambia el color al pasar el ratón */
+    color: black;
+}
+
+/* Adaptación del menú para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .menu-item {
+        width: 45%; /* Cada ítem ocupa casi la mitad de la pantalla en dispositivos pequeños */
+        height: 25vh; /* Ajuste de la altura */
+    }
+}
+
+/* Adaptación del menú para pantallas muy pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    .menu-item {
+        width: 40vw;
+        height: 20vh; /* Ajuste de la altura */
+    }
+    .whatsapp-btn
+    {
+        left: 70vw;
+    }
+}

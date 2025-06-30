@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reccreative</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculación a tu archivo CSS -->
+    <!-- Cargar Font Awesome para usar los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Contenedor principal del carrusel -->
+        <div class="carrusel">
+
+            <!-- Contenedor de todas las imágenes -->
+            <div class="slides">
+                <div class="slide">
+                    <picture>
+                        <source srcset="Imagenes_promociones/10_Disenos.jpg" media="(max-width: 768px)"> <!-- Imagen para pantallas pequeñas -->
+                        <img src="Imagenes_promociones/PROMO02.jpg" alt="Imagen 1">
+                    </picture>
+                </div> <!-- Primer slide -->
+                <div class="slide">
+                    <picture>
+                        <source srcset="Imagenes_promociones/8_Reels.jpg" media="(max-width: 768px)"> <!-- Imagen para pantallas pequeñas -->
+                        <img src="Imagenes_promociones/PROMO03.jpg" alt="Imagen 2">
+                    </picture>
+                </div> <!-- Segundo slide -->
+                <div class="slide">
+                    <picture>
+                        <source srcset="Imagenes_promociones/Basico.jpg" media="(max-width: 768px)"> <!-- Imagen para pantallas pequeñas -->
+                        <img src="Imagenes_promociones/Paquete_Arranques.jpg" alt="Imagen 3">
+                    </picture>
+                </div> <!-- Tercer slide -->
+                <div class="slide">
+                    <picture>
+                        <source srcset="Imagenes_promociones/3_Meses.jpg" media="(max-width: 768px)"> <!-- Imagen para pantallas pequeñas -->
+                        <img src="Imagenes_promociones/Paquete_Aceleres.jpg" alt="Imagen 4">
+                    </picture>
+                </div> <!-- Cuarto slide -->
+                <div class="slide">
+                    <picture>
+                        <source srcset="Imagenes_promociones/Paquete_Empresarial_Movil.jpg" media="(max-width: 768px)"> <!-- Imagen para pantallas pequeñas -->
+                        <img src="Imagenes_promociones/Paquete_Empresarial.jpg" alt="Imagen 5">
+                    </picture>
+                </div> <!-- Quinto slide -->
+            </div>
+
+            <!-- Flechas para moverse a la izquierda y derecha -->
+            <button class="prev" onclick="moverSlide(-1)">&#10094;</button> <!-- Flecha izquierda -->
+            <button class="next" onclick="moverSlide(1)">&#10095;</button> <!-- Flecha derecha -->
+
+            <!-- Botones de navegación para ir a una imagen específica -->
+            <div class="dots">
+                <span class="dot" onclick="irASlide(1)"></span> <!-- Botón para el primer slide -->
+                <span class="dot" onclick="irASlide(2)"></span> <!-- Botón para el segundo slide -->
+                <span class="dot" onclick="irASlide(3)"></span> <!-- Botón para el tercer slide -->
+                <span class="dot" onclick="irASlide(4)"></span> <!-- Botón para el cuarto slide -->
+                <span class="dot" onclick="irASlide(5)"></span> <!-- Botón para el quinto slide -->
+            </div>
+
+        </div>
+
+        <!-- Archivo JavaScript para controlar el carrusel -->
+        <script src="script.js"></script>
+    </header>
+    <!-- Sección principal -->
+    <main>
+        <section id="login">
+            <div class="datos_login">
+                <h2>Iniciar sesión</h2>
+                <form action="login.php" method="post"> <!-- 'action' es la URL a la que se enviarán los datos, 'method' puede ser 'post' o 'get' -->
+                    <div class="username">
+                        <input type="text" id="usuario" name="usuario" required> <!-- Campo de entrada para el nombre de usuario -->
+                        <label for="usuario">Usuario</label>
+                    </div>
+                    <div class="password">
+                        <input type="password" id="contra" name="contra" required> <!-- Campo de entrada para la contraseña -->
+                        <label for="contra">Contraseña</label>
+                    </div>
+                    <button type="submit" class="login_btn">Iniciar Sesión</button> <!-- Botón de inicio de sesión -->
+                </form>
+            </div>
+            <div class="logo">
+                <img src="Logos/A.png" alt="logo_login">
+            </div>
+        </section>
+
+        <!--<section id="information">
+            <div class="information_carrusel">
+                <h2>Información de la empresa</h2>
+                <p>Aquí irán las imágenes de la Información.</p>
+            </div>
+        </section>-->
+
+        <section id="socialmedia">
+            <!-- Botón de WhatsApp -->
+            <a href="http://wa.me/522212295097" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> <!-- Icono de WhatsApp -->
+            </a>
+
+            <!-- Botón de Instagram -->
+            <a href="https://www.instagram.com/reccreative.mx/" class="instagram-btn" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Icono de Instagram -->
+            </a>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <!--<p><a href="#contacto">Contáctanos</a></p>-->
+    </footer>
+</body>
+</html>
